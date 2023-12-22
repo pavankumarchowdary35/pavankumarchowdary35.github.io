@@ -1,10 +1,10 @@
 # main links links
 main:
   - title: "Pages"
-    url: /pages/
+    url: /_pages/
 
   - title: "Posts"
-    url: /posts/
+    url: /_posts/
 
   - title: "Experience"
     url: /Experience/
