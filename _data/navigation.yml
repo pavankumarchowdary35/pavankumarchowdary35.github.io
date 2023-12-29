@@ -16,10 +16,10 @@ main:
   #   url: /year-archive/
       
   - title: "Experience"
-    url: /Experience/
+    url: /Experience/experience.html
 
   - title: "Projects"
-    url: /Projects/
+    url: /Projects/projects.md
 
   - title: "Skills"
     url: /Skills/    
