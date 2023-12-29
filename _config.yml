@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Venkatesh Desai"
+title                    : "Venkatesh's Homepage"
 title_separator          : "-"
 name                     : &name "Venkatesh Desai"
 description              : &description "ML Engineer"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Venkatesh Desai"
   avatar           : "venky_dp.jpeg"
-  bio              : "Machine Learning Engineer"
+  bio              : "Masters in Robotics (CS conc.)"
   location         : "Boston, MA"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
