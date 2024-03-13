@@ -64,7 +64,7 @@
             <div class="archive">
                 <meta itemprop="headline" content="Venkatesh Desai - Notable Projects">
                 <meta itemprop="description" content="Venkatesh Desai - Notable Projects">
-                <h2 style="font-size: x-large;"><b>Natural Language Processing Proejcts</b></h2>
+                <h2 style="font-size: x-large;"><b>Natural Language Processing Projects</b></h2>
                 <div class="list__item" style="margin-top: 2%;">
                     <div class="card">
                         <div class="card-content">
@@ -295,3 +295,53 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+        <script>
+            var sliderObjects = [];
+            createSliderObjects();
+
+            function plusDivs(obj, n) {
+                var parentDiv = $(obj).parent();
+                var matchedDiv;
+                $.each(sliderObjects, function(i, item) {
+                    if ($(parentDiv[0]).attr('id') == $(item).attr('id')) {
+                        matchedDiv = item;
+                        return false;
+                    }
+                });
+                matchedDiv.slideIndex=matchedDiv.slideIndex+n;
+                showDivs(matchedDiv, matchedDiv.slideIndex);
+            }
+
+            function createSliderObjects() {
+                var sliderDivs = $('.slider');
+                $.each(sliderDivs, function(i, item) {
+                    var obj = {};
+                    obj.id = $(item).attr('id');
+                    obj.divContent = item;
+                    obj.slideIndex = 1;
+                    obj.slideContents = $(item).find('.mySlides');
+                    showDivs(obj, 1);
+                    sliderObjects.push(obj);
+                });
+            }
+
+            function showDivs(divObject, n) {
+                debugger;
+                var i;
+                if (n > divObject.slideContents.length) {
+                    divObject.slideIndex = 1
+                }
+                if (n < 1) {
+                    divObject.slideIndex = divObject.slideContents.length
+                }
+                for (i = 0; i < divObject.slideContents.length; i++) {
+                    divObject.slideContents[i].style.display = "none";
+                }
+                divObject.slideContents[divObject.slideIndex - 1].style.display = "block";
+            }
+        </script>
+    </body>
+</html>
